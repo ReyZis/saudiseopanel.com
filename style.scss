@@ -1,0 +1,107 @@
+/* importing the font */
+
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap');
+
+/* start variables */
+
+$prime-font: 'Lemonada',
+cursive;
+$second-font: 'El Messiri',
+sans-serif;
+$primary-color: #e74944;
+$secondary-color: #867ae6;
+$tertiary-color: #d3eb1e;
+
+/* end variabels */
+
+
+/* start global */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $second-font;
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+/* end global */
+
+
+/* start sign in form */
+
+.bg-prime {
+    background-color: $secondary-color;
+}
+
+.sign-in-form {
+    h1 {
+        font-family: $prime-font;
+        line-height: 4rem;
+    }
+    .input-theme {
+        direction: ltr;
+        &::placeholder {
+            direction: rtl;
+        }
+    }
+    .link-theme {
+        color: $tertiary-color;
+        font-weight: bold;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .btn-theme {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+
+/* svg animation */
+
+svg#freepik_stories-dashboard:not(.animated) .animable {
+    opacity: 0;
+}
+
+svg#freepik_stories-dashboard.animated #freepik--background-complete--inject-36 {
+    animation: 0.5s 1 forwards ease-out slideRight;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-dashboard.animated #freepik--Dashboard--inject-36 {
+    animation: 0.5s 1 forwards ease-out slideLeft;
+    animation-delay: 0.6s;
+    opacity: 0
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
