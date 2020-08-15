@@ -29,23 +29,32 @@ body {
   line-height: 4rem;
 }
 
-.sign-in-form .input-theme {
+.sign-in-form .input-wrapper {
+  border-radius: 50px;
+}
+
+.sign-in-form .input-wrapper .input-theme {
+  border: none;
   direction: ltr;
 }
 
-.sign-in-form .input-theme::-webkit-input-placeholder {
+.sign-in-form .input-wrapper .input-theme:focus {
+  outline: none;
+}
+
+.sign-in-form .input-wrapper .input-theme::-webkit-input-placeholder {
   direction: rtl;
 }
 
-.sign-in-form .input-theme:-ms-input-placeholder {
+.sign-in-form .input-wrapper .input-theme:-ms-input-placeholder {
   direction: rtl;
 }
 
-.sign-in-form .input-theme::-ms-input-placeholder {
+.sign-in-form .input-wrapper .input-theme::-ms-input-placeholder {
   direction: rtl;
 }
 
-.sign-in-form .input-theme::placeholder {
+.sign-in-form .input-wrapper .input-theme::placeholder {
   direction: rtl;
 }
 
@@ -63,7 +72,185 @@ body {
   color: white;
 }
 
-/* svg animation */
+/* end sign in form */
+/* start Advantages */
+.Advantages .header-theme {
+  color: #e74944;
+  font-family: "Lemonada", cursive;
+  text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Advantages .card {
+  background-color: #e74944;
+}
+
+.Advantages .card h3,
+.Advantages .card p {
+  color: white;
+}
+
+.Advantages .card hr {
+  position: relative;
+  width: 50%;
+  height: 5px;
+  background-color: #d3eb1e;
+}
+
+/* end Advantages */
+/* start social power */
+.social-power .header-theme {
+  font-family: "Lemonada", cursive;
+  font-size: 3vw;
+}
+
+.social-power .divider {
+  width: 25%;
+  height: 5px;
+  background-color: #d3eb1e;
+}
+
+.social-power .social-bar {
+  position: relative;
+}
+
+.social-power .social-bar i {
+  font-size: 2.5vw;
+}
+
+.social-power .social-bar p {
+  font-size: 20px;
+}
+
+.social-power .social-bar::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 14px 4px #fff;
+          box-shadow: 0 0 14px 4px #fff;
+}
+
+.social-power .social-bar .dot-theme {
+  position: relative;
+  cursor: pointer;
+}
+
+.social-power .social-bar .dot-theme::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -8px;
+  border-radius: 100%;
+  border: 8px solid white;
+  -webkit-box-shadow: 0 0 14px 4px #fff;
+          box-shadow: 0 0 14px 4px #fff;
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+  z-index: 3;
+}
+
+.social-power .social-bar .dot-theme:hover::after, .social-power .social-bar .dot-theme.active::after {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.social-power .social-bar .dot-theme::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -3px;
+  border-radius: 100%;
+  border: 3px solid #e74944;
+  opacity: 0;
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+  z-index: 5;
+}
+
+.social-power .social-bar .dot-theme:hover::before, .social-power .social-bar .dot-theme.active::before {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 1;
+}
+
+/* end social power */
+/* start achievement */
+.achievement .header-theme {
+  font-family: "Lemonada", cursive;
+  color: #e74944;
+}
+
+.achievement .wrapper {
+  border: 3px dashed #867ae6;
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  font-size: 40px;
+}
+
+.achievement .wrapper h2 {
+  color: #e74944;
+  font-weight: bold;
+}
+
+.achievement .wrapper p {
+  font-size: 20px;
+}
+
+.achievement .wrapper span {
+  font-size: 15px;
+  color: lightslategray;
+}
+
+.achievement .carousel-control-prev-icon,
+.achievement .carousel-control-next-icon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+/* end achievement */
+/* start join us */
+.join-us .btn-theme {
+  background-color: #e74944;
+  color: white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+/* end join us */
+/* start excellence */
+.excellence .card {
+  background-color: #e74944;
+}
+
+.excellence .card .dashed-wrapper {
+  border: 3px dashed white;
+  border-radius: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.excellence .card .dashed-wrapper .text {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: white;
+  color: #e74944;
+  font-size: 30px;
+}
+
+/* end excellence */
+/* first svg animation */
 svg#freepik_stories-dashboard:not(.animated) .animable {
   opacity: 0;
 }
